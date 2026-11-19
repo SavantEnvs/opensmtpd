@@ -1,0 +1,6 @@
+# comment
+bob@example.org, "|/usr/bin/procmail -f-"
+/home/bob/Mail/inbox
+\bob
+error:550 5.1.1 gone
+:include:/etc/list

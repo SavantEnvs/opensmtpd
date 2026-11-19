@@ -1,0 +1,12 @@
+220 mx.example.net ESMTP
+250-mx.example.net hello
+250-PIPELINING
+250-SIZE 10240000
+250-DSN
+250 AUTH PLAIN LOGIN
+250 2.1.0 sender ok
+250 2.1.5 rcpt ok
+250 2.1.5 rcpt ok
+354 go ahead
+250 2.0.0 queued as 1234
+221 2.0.0 bye

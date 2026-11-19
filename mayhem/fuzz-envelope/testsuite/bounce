@@ -1,0 +1,24 @@
+version: 3
+type: bounce
+smtpname: mx.example.org
+helo: h
+hostname: h
+sockaddr: 2001:db8::1
+sender: 
+rcpt: a@b
+dest: a@b
+ctime: 1
+last-try: 0
+last-bounce: 0
+ttl: 1
+retry: 2
+flags: bounce
+errorline: 550 no
+esc-class: 5
+esc-code: 10
+dsn-notify: success,failure
+dsn-ret: HDRS
+dsn-envid: x
+dsn-orcpt: rfc822;a@b
+bounce-type: error
+bounce-delay: 3600

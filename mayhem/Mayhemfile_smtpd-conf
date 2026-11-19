@@ -1,0 +1,13 @@
+project: savantenvs/opensmtpd
+target: smtpd-conf
+
+# smtpd(8) itself, built with AFL++ instrumentation (mayhem/build/afl): the
+# configuration check `smtpd -n -f <file>` parses the input as smtpd.conf.
+cmds:
+  - cmd: /mayhem/mayhem/out/smtpd-afl -n -f @@
+    afl: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/smtpd-conf/testsuite

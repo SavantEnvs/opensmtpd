@@ -1,0 +1,16 @@
+EHLO client.example.net
+MAIL FROM:<alice@example.net> SIZE=100 BODY=8BITMIME RET=HDRS ENVID=abc
+RCPT TO:<bob@example.org> NOTIFY=SUCCESS,FAILURE ORCPT=rfc822;bob@example.org
+RCPT TO:<carol@example.org>
+DATA
+From: alice@example.net
+To: bob@example.org
+Subject: hi
+
+hello
+..
+.
+RSET
+NOOP
+HELP
+QUIT

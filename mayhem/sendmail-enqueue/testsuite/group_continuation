@@ -1,0 +1,6 @@
+From: alice (Alice) <alice>
+To: friends: bob@example.net,
+ carol@example.com; , "quoted \" name" <dave@example.com>
+Subject: no date, no message-id
+
+body

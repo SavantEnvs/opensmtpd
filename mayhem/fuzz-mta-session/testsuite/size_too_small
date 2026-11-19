@@ -1,0 +1,5 @@
+220 mx.example.net ESMTP
+250-mx.example.net
+250 SIZE 10
+250 reset
+221 bye

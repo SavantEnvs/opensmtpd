@@ -1,0 +1,9 @@
+From: Alice <alice@example.net>
+To: bob@example.org,
+  carol@example.org
+Subject: hello
+Received: from a by b
+Message-Id: <1@example.net>
+
+body line
+..dot

@@ -1,0 +1,11 @@
+project: savantenvs/opensmtpd
+target: fuzz-rfc5322
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_rfc5322
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-rfc5322/testsuite

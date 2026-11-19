@@ -1,0 +1,3 @@
+# out-of-tree build directories and harness binaries written by mayhem/build.sh
+/build/
+/out/

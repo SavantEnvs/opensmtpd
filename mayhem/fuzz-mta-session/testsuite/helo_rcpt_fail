@@ -1,0 +1,10 @@
+220 mx.example.net
+500 unknown command
+250 mx.example.net
+250 ok
+450-4.2.0 mailbox busy
+450-4.2.0 try again
+450 4.2.0 later
+452 4.5.3 too many
+250 reset
+221 bye

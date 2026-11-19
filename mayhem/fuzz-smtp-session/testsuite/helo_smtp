@@ -1,0 +1,8 @@
+HELO client
+MAIL FROM:<>
+RCPT TO:<postmaster>
+DATA
+Subject: x
+
+.
+QUIT

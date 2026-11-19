@@ -1,0 +1,11 @@
+project: savantenvs/opensmtpd
+target: fuzz-dns
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_dns
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-dns/testsuite

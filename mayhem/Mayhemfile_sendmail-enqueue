@@ -1,0 +1,15 @@
+project: savantenvs/opensmtpd
+target: sendmail-enqueue
+
+# smtpctl(8) in sendmail(8) mode (enqueue.c), built with AFL++ instrumentation
+# (mayhem/build/afl): `sendmail -t` reads the input as the message on stdin,
+# takes sender and recipients from its headers and spools it offline.
+# enqueue() exit()s on a malformed address, hence a whole-process target.
+cmds:
+  - cmd: /mayhem/mayhem/out/sendmail-enqueue @@
+    afl: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sendmail-enqueue/testsuite

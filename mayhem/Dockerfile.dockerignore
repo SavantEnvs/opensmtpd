@@ -1,0 +1,11 @@
+# .dockerignore for mayhem/Dockerfile (BuildKit reads <Dockerfile>.dockerignore).
+# Bake in the FULL repo including .git; drop only local build output.
+mayhem/build/
+mayhem/out/
+**/*.o
+**/*.a
+**/*.so
+autom4te.cache/
+.DS_Store
+*.swp
+*~

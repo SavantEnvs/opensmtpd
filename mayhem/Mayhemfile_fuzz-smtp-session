@@ -1,0 +1,11 @@
+project: savantenvs/opensmtpd
+target: fuzz-smtp-session
+
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_smtp_session
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-smtp-session/testsuite
